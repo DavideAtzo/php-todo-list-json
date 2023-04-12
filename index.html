@@ -19,7 +19,7 @@
 <body>
     <div id="app">
         <input type="text" v-model="newToDo">
-        <button>Inserisci</button>
+        <button @click="addTodo()">Inserisci</button>
         <ul>
             <li v-for="todo in todo">
                 <p>{{ todo.text }}</p>

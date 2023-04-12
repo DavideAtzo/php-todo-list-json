@@ -9,6 +9,11 @@ createApp({
             newToDo: ''
         }
     },
+    methods: {
+        addTodo() {
+            console.log('newTodo')
+        }
+    },
     created() {
         axios.get('server.php')
         .then((response) => {
