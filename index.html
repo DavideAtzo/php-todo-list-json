@@ -18,6 +18,8 @@
 
 <body>
     <div id="app">
+        <input type="text" v-model="newToDo">
+        <button>Inserisci</button>
         <ul>
             <li v-for="todo in todo">
                 <p>{{ todo.text }}</p>
