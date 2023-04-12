@@ -11,8 +11,17 @@ createApp({
     },
     methods: {
         addTodo() {
-            console.log('newTodo')
-        }
+            const data = {
+                newToDo: this.newToDo
+            };
+            axios.post('server.php', data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            })
+                .then((response) => {
+                    this.todo = response.data;
+                })
+        },
+        
     },
     created() {
         axios.get('server.php')
